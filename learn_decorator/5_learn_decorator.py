@@ -28,6 +28,6 @@ def my_func(x):
 def add(x, y):
     return x + y
 
-my_func(1)
+my_func(1)              # 只有一个输入参数
 print('-' * 20)
-print(add(2,3))
+print(add(2,3))         # 有两个输入参数
