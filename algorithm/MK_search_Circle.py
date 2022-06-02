@@ -1,4 +1,4 @@
-# 一个简单的马尔科夫链搜索一个圆
+# 一个简单的马尔科夫过程搜索一个圆
 
 import random 
 import pandas as pd 
