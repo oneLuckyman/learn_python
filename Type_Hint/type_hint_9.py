@@ -48,12 +48,12 @@ class Player_New:
     def update_attack(self, atk: AttackPoint_New):
         self.uid = atk      # 这里 mypy 的静态检查就可以检查出来错误了，因为 UserId_New 和 AttackPoint_New 已经 python 视为两种不同的类型
 
-# 但这又会产生一个新问题，不能用 int 直接赋值了
+# 但这又会产生一个新问题，不能用 int 直接赋值了，会被 mypy 认为是错误
 # 因为 UserId_New 和 AttackPoint_New 已经被认为不是 int 而是上面定义的那种新类型，尽管它们实际上就是 int
 p = Player_New(1, 100)
 
 # 这个时候必须显式的把 int 转变成上面定义的 NewType，虽然这种行为在实际运行时很可能根本不会有任何实际操作
 p = Player_New(UserId_New(1), AttackPoint_New(100))
 
-# 最后吐槽一下，用到了这个地步，python 简直和 C++ 一样麻烦了
+# 最后吐槽一下，用到这个地步，python 简直和 C++ 一样麻烦了
 # 但是这些标注 python 并不强制使用，具体怎么用用多少可以视情况而定
