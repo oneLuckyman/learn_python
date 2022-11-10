@@ -1,0 +1,22 @@
+  1           0 LOAD_NAME                0 (print)
+              2 LOAD_CONST               0 ('Hello world')
+              4 CALL_FUNCTION            1
+              6 POP_TOP
+
+  2           8 LOAD_CONST               1 (1)
+             10 STORE_NAME               1 (a)
+
+  3          12 LOAD_CONST               2 (2)
+             14 STORE_NAME               2 (b)
+
+  4          16 LOAD_NAME                1 (a)
+             18 LOAD_NAME                2 (b)
+             20 BINARY_ADD
+             22 STORE_NAME               3 (c)
+
+  5          24 LOAD_NAME                0 (print)
+             26 LOAD_NAME                3 (c)
+             28 CALL_FUNCTION            1
+             30 POP_TOP
+             32 LOAD_CONST               3 (None)
+             34 RETURN_VALUE
